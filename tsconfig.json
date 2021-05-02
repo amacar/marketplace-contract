@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "module": "ES2020",
+    "module": "commonjs",
     "target": "ES2019",
-    "lib": ["ES2019", "ES2020.String", "DOM"],
+    "lib": ["ES2019", "DOM"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": false,
-    "jsx": "react",
+    "resolveJsonModule": true,
     "declaration": true,
     "pretty": true,
     "newLine": "lf",
@@ -24,5 +23,6 @@
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": ["src/**/**.ts"]
+  "include": ["src/**/**.ts"],
+  "exclude": ["dist", "**/*.spec.ts", "**/*.test.ts"]
 }
